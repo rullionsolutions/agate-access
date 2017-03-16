@@ -27,7 +27,7 @@ module.exports.addFields([
     { id: "id"              , label: "Id"                   , type: "Number"   , editable: false, list_column: true, search_criterion: true, decimal_digits: 0 },
     { id: "title"           , label: "Title"                , type: "Text"     , editable: false, list_column: true, search_criterion: true, data_length: 100 },
     { id: "date_time"       , label: "Date/time"            , type: "DateTime" , editable: false, list_column: true },
-    { id: "page"            , label: "Page"                 , type: "Text"     , editable: false, data_length: 40, config_item: "pages" },
+    { id: "page"            , label: "Page"                 , type: "Text"     , editable: false, data_length: 40, collection_id: "pages" },
     { id: "page_key"        , label: "Page Key"             , type: "Text"     , editable: false, data_length: 80 },
     { id: "post_server"     , label: "Post Server (ms)"     , type: "Number"   , editable: false, list_column: true, decimal_digits: 0 },
     { id: "post_interval"   , label: "Post Interval (ms)"   , type: "Number"   , editable: false, list_column: true, decimal_digits: 0 },

@@ -19,7 +19,7 @@ module.exports = Data.Entity.clone({
 
 module.exports.addFields([
     { id: "user_id"   , label: "User"    , type: "Reference", list_column: true, search_criterion: true, mandatory: true, ref_entity: "ac_user" },
-    { id: "role_id"   , label: "Role"    , type: "Text"     , list_column: true, search_criterion: true, mandatory: true, editable: false, data_length: 25, config_item: "roles", label_prop: "title" }
+    { id: "role_id"   , label: "Role"    , type: "Text"     , list_column: true, search_criterion: true, mandatory: true, editable: false, data_length: 25, collection_id: "roles" }
 ]);
 
 
