@@ -19,13 +19,13 @@ module.exports = Data.Entity.clone({
 
 
 module.exports.addFields([
-    { id: "area"       , label: "Area"             , type: "Text", data_length: 2 , mandatory: true, search_criterion: true, list_column: true, config_item: "areas" },
+    { id: "area"       , label: "Area"             , type: "Option", data_length: 2 , mandatory: true, search_criterion: true, list_column: true, collection_id: "areas" },
     { id: "id"         , label: "Id"               , type: "Text", data_length: 25, mandatory: true, list_column: true },
     { id: "title"      , label: "Title"            , type: "Text", data_length: 80, mandatory: true, search_criterion: true, list_column: true },
     { id: "roles"      , label: "Initial Role(s)"  , type: "Text", data_length: 255, mandatory: true, list_column: true, description: "comma-separated list, including 'user'" },
     { id: "text_string", label: "Account Initiation Text String", type: "Text", data_length: 40 },
-    { id: "reset_page" , label: "Account Initiation Reset Page" , type: "Text", data_length: 40, config_item: "pages" },
-    { id: "wf_tmpl"    , label: "Workflow Template"             , type: "Text", data_length: 80, config_item: "wf_templates" },
+    { id: "reset_page" , label: "Account Initiation Reset Page" , type: "Text", data_length: 40, collection_id: "pages" },
+    { id: "wf_tmpl"    , label: "Workflow Template"             , type: "Text", data_length: 80, collection_id: "wf_templates" },
     { id: "unused_expiry_period", label: "Unused Expiry Period" , type: "Text", regex_pattern: "^[0-9]{1,4}(days|weeks|months|years)$", regex_label: "Period after which inactive user accounts will be deactivated" }
 // Don't want to offer this alternative - passwords should only be set once user account is approved, partly for security reasons
 //    { id: "incl_pswd"  , label: "Include Password?"             , type: "Boolean", default_val: "Y", description: "If you wish the new user to set their password on the request please tick this box" },
