@@ -66,7 +66,8 @@ Access.roles.add(Access.Role.clone({
           list_advanced_mode        : true,            // Use advanced list mode
         search_advanced_mode        : true,            // Use advanced search mode
         multi_level_menu            : true,            // Use multi-level menus
-        allow_multiple_concurrent   : true,            // Allow multiple concurrent sessions
+        // RULS-016-1-7 - prevent concurrent logins
+        // allow_multiple_concurrent   : true,            // Allow multiple concurrent sessions
         max_inactive_interval       : (60 * 30),       // Session time-out period in seconds
         password_change_period      : false            // Avoid having to change password
     }

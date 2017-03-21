@@ -21,6 +21,7 @@ require("agate-access/session/ac_visit.js");
 require("agate-access/session/ac_visit_context.js");
 require("agate-access/session/ac_visit_display.js");
 require("agate-access/session/ac_visit_search.js");
+require("agate-access/session/CoordinateSessionsAcrossServers.js");
 
 require("agate-access/user/ac_user.js");
 require("agate-access/user/ac_pswd_change.js");
