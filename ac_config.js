@@ -91,7 +91,7 @@ Access.roles.add(Access.Role.clone({
     params      : {
         help_article                : "help_guest",
         is_guest                    : true,
-        home_page_url               : "?page_id=home", // 'home' has skin of 'index.html' forcing log-in page
+        home_page_id                : "home",          // 'home' has skin of 'index.html' forcing log-in page
         allow_multiple_concurrent   : true             // Allow multiple concurrent sessions
     }
 }));
