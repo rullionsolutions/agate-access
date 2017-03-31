@@ -74,7 +74,7 @@ text_strings.user_account_extended = {
         + " > if you will be submitting timesheets, check the timesheet format accommodates your contract as it should, "
         + "e.g. there are spaces to add all relevant rates you are eligible to claim.\n\n"
         + "If you need any help or guidance to use the system, we have created a number of training videos which can be found here:\n"
-        + "{base_uri}index.html?page_id=pb_article_show&page_key=help_guest\n\n"
+        + "{base_uri}index.html#page_id=pb_article_show&page_key=help_guest\n\n"
         + "If you require any assistance with the application or encounter any problems, please let us know "
         + "via rsl.support@rullion.co.uk or on 0161 601 3416\n\n"
         + "{email_footer}",
@@ -89,7 +89,7 @@ text_strings.duplicate_account_request = {
     detail: "Welcome to {product_name}.\n"
         + "A request has been made to create a new account using this email address.\n\n"
         + "This could indicate an attempt to hack your account.\n\n"
-        + "If you did not make this request then it is suggested that you update your password at {base_uri}/index.html?page_id=ac_pswd_change"
+        + "If you did not make this request then it is suggested that you update your password at {base_uri}/index.html#page_id=ac_pswd_change"
         + "{email_footer}",
 };
 

@@ -12,7 +12,7 @@ module.exports = UI.Page.clone({
     title           : "Request a User Account",
     transactional   : true,
     security        : { all: false, guest: true },
-    exit_url_cancel : "guest.html?page_id=ac_user_request_choose",
+    exit_url_cancel : "guest.html#page_id=ac_user_request_choose",
     skin            : "guest.html"
 });
 
