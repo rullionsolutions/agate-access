@@ -1,7 +1,7 @@
 "use strict";
 
 
-require("agate-access/ac_config.js");
+require("agate-access/config.js");
 
 require("agate-access/user_type/sy_user_type.js");
 require("agate-access/user_type/sy_user_type_context.js");
