@@ -120,7 +120,7 @@ module.exports.getField("status").override("getUneditableCSSStyle", function () 
     } else if (this.get() === "L") {        // locked
         css = "color: orange";
     } else if (this.get() === "A") {        // active
-        css ="color: green";
+        css = "color: green";
     } else {
         css = "color: red";            // suspended, rejected
     }
@@ -129,21 +129,27 @@ module.exports.getField("status").override("getUneditableCSSStyle", function () 
 
 
 module.exports.define("create", function (trans, spec) {
-    var user_id,
-        user_row;
+    var user_id;
+    var user_row;
 
     if (!spec.user_type || !spec.name || !spec.email) {
-        this.throwError({ id: "missing_properties", properties: "user_type, name and/or email", user_type: spec.user_type, name: spec.name, email: spec.email });
+        this.throwError({
+            id: "missing_properties",
+            properties: "user_type, name and/or email",
+            user_type: spec.user_type,
+            name: spec.name,
+            email: spec.email,
+        });
     }
-    user_id   = this.generateId(trans, spec.name, spec.email);
-    user_row  = trans.createNewRow("ac_user");
-    user_row.getField("id"       ).set(user_id);
-    user_row.getField("name"     ).set(spec.name);
+    user_id = this.generateId(trans, spec.name, spec.email);
+    user_row = trans.createNewRow("ac_user");
+    user_row.getField("id").set(user_id);
+    user_row.getField("name").set(spec.name);
     user_row.getField("user_type").set(spec.user_type);
-    user_row.getField("email"    ).set(spec.email);
+    user_row.getField("email").set(spec.email);
     user_row.addRoles();
     spec.session = trans.session;
-    if (this.skip_new_user_setup_unlock) {
+    if (this.skip_new_user_setup_unlock || spec.skip_new_user_setup_unlock) {
         user_row.getField("status").set("L");         // if not launched, then locked
     } else {
         user_row.setupUnlock(spec, trans);
@@ -153,8 +159,8 @@ module.exports.define("create", function (trans, spec) {
 
 
 module.exports.define("getIdFromEmail", function (email) {
-    var resultset,
-        out;
+    var resultset;
+    var out;
 
     try {
         resultset = SQL.Connection.shared.executeQuery("SELECT _key FROM ac_user WHERE email=" + SQL.Connection.escape(email));
