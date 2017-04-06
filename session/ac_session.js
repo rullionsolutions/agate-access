@@ -24,6 +24,13 @@ module.exports.addFields([
     { id: "end_dttm"    , label: "End Date/time"     , type: "DateTime" , editable: false, list_column: true },
     { id: "user_id"     , label: "User"              , type: "Reference", editable: false, list_column: true, search_criterion: true, ref_entity: "ac_user" },
     { id: "page"        , label: "Page"              , type: "Text"     , editable: false, visible: false, data_length: 40, collection_id: "pages" },
+    {
+        id: "lb_server",
+        label: "LB Server ID",
+        type: "Text",
+        editable: false,
+        data_length: 255,
+    },
     { id: "server_ident", label: "Server Ident"      , type: "Text"     , editable: false, data_length: 255 },
     { id: "stat_archive", label: "Status Pre-Archive", type: "Option"   , editable: false, list: "ac.session_status" },
     { id: "user_agent"  , label: "User Agent"        , type: "Text"     , editable: false, data_length: 255 },
