@@ -2,6 +2,7 @@
 
 var Data = require("lazuli-data/index.js");
 var SQL = require("lazuli-sql/index.js");
+var IO = require("lazuli-io/index.js");
 var Rhino = require("lazuli-rhino/index.js");
 var Access = require("lazuli-access/index.js");
 var menu2;
@@ -19,7 +20,8 @@ module.exports = Data.Area.clone({
 });
 
 module.exports.params.valid_work_email_domains = [];
-module.exports.valid_work_email_domains_error_msg = "the email address must be issued by " + Rhino.app.client.organization_name;
+module.exports.valid_work_email_domains_error_msg = "the email address must be issued by " +
+    Rhino.app.client.organization_name;
 module.exports.valid_work_email_domains_scope = "soft";
 
 menu2 = Access.MenuItem.addChild({
@@ -108,6 +110,14 @@ Rhino.App.defbind("ac_countActiveUsers", "dailyBatch", function (session) {
     var active_users = module.exports.countActiveUsers();
     session.messages.add({ id: "active_users_last_month", type: 'I',
         text: "Active Users within the Last Month: " + active_users, active_users: active_users });
+});
+
+
+Rhino.App.defbind("access_loadData", "build", function () {
+    SQL.Connection.shared.loadSQLFile(IO.File.getModulePath(module) + "/session/build.sql");
+    SQL.Connection.shared.loadSQLFile(IO.File.getModulePath(module) + "/user/base_users.sql");
+    SQL.Connection.shared.loadSQLFile(IO.File.getModulePath(module) + "/user/build.sql");
+    SQL.Connection.shared.loadSQLFile(IO.File.getModulePath(module) + "/user_type/build.sql");
 });
 
 
