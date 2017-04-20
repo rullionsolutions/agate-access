@@ -64,7 +64,7 @@ module.exports.defbind("updateAfterSections", "updateAfterSections", function (p
                         user_row = query.getRow(this.getTrans());
                         user_row.setupUnlock({ session: this.session, reset_page: this.reset_page, text_string: this.text_string });
                         this.getTrans().save();
-                        // this.redirect_url = "?page_id=guest_home";
+                        // this.redirect_url = "#page_id=guest_home";
                         this.buttons.get("send" ).visible = false;
                         this.buttons.get("login").visible = true;
                         msg_obj = Data.areas.get("ac").text_strings[this.pswd_send];
