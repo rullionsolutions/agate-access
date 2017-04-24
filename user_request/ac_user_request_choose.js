@@ -5,24 +5,35 @@ var Data = require("lazuli-data/index.js");
 
 
 module.exports = UI.Page.clone({
-    id              : "ac_user_request_choose",
-    entity_id       : "ac_user",
-    title           : "Request a User Account",
-    security        : { all: false, guest: true },
-    skin            : "guest.html"
+    id: "ac_user_request_choose",
+    entity_id: "ac_user",
+    title: "Request a User Account",
+    security: {
+        all: false,
+        guest: true,
+    },
+    skin: "guest.html",
 });
 
 
 module.exports.sections.addAll([
-    { id: "types", type: "Tiles", entity: "sy_user_type", title: "Choose the type of user account you think you need",
+    {
+        id: "types",
+        type: "ItemSetTile",
+        entity: "sy_user_type",
+        title: "Choose the type of user account you think you need",
         text: "Please choose which type of user account you think is appropriate for your needs, " +
-            "then enter the details requested, and your requested will be submitted for approval" }
+            "then enter the details requested, and your requested will be submitted for approval",
+    },
 ]);
 
 
 module.exports.buttons.addAll([
 //    { id: "save" , label: "Save", main_button: true },
-    { id: "login", label: "Return to Log-in" }
+    {
+        id: "login",
+        label: "Return to Log-in",
+    },
 ]);
 
 
