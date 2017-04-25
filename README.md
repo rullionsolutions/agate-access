@@ -1,2 +1,2 @@
 # agate-access
-Entity and Page objects corresponding to lazuli-access
+Persistent Entities for Users, Roles and Sessions, etc

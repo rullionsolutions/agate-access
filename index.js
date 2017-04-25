@@ -2,6 +2,7 @@
 
 
 require("agate-access/config.js");
+require("agate-access/aug-lazuli-access/Session.js");
 
 require("agate-access/user_type/sy_user_type.js");
 require("agate-access/user_type/sy_user_type_context.js");

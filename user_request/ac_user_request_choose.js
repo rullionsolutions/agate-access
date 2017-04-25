@@ -29,7 +29,6 @@ module.exports.sections.addAll([
 
 
 module.exports.buttons.addAll([
-//    { id: "save" , label: "Save", main_button: true },
     {
         id: "login",
         label: "Return to Log-in",
@@ -42,8 +41,8 @@ module.exports.defbind("setupEnd", "setupEnd", function () {
         full_condition: Data.entities.get("ac_user").user_request_types_allowed,
     });
     this.sections.get("types").record.renderTile = function (parent_elem, render_opts) {
-        var anchor_elem = parent_elem.addChild("a", this.id + "_" + this.getKey(), "btn css_tile");
-        anchor_elem.attribute("href", UI.pages.get("ac_user_request_create").getSimpleURL(this.getKey()));
+        var anchor_elem = parent_elem.makeElement("a", "btn css_tile", this.id + "_" + this.getKey());
+        anchor_elem.attr("href", UI.pages.get("ac_user_request_create").getSimpleURL(this.getKey()));
         this.getField(this.tile_field || this.title_field).render(anchor_elem, render_opts);
     };
 });
