@@ -17,6 +17,9 @@ Access.Session.defbind("passwordLastUpdated", "start", function () {
     var last_upd;
     var days_left;
 
+    this.debug("passwordLastUpdated() " + this.is_guest + ", " + this.chameleon + ", " +
+        this.password_change_period + ", " + this.password_reminder_period);
+
     if (this.is_guest || this.chameleon) {
         return;
     }
@@ -28,7 +31,7 @@ Access.Session.defbind("passwordLastUpdated", "start", function () {
         }
         last_upd.add("M", this.password_change_period);
         days_left = (new Date()).daysBetween(last_upd);
-        this.debug("Session.passwordLastUpdated() " + last_upd + ", " + days_left);
+        this.debug("passwordLastUpdated() " + last_upd + ", " + days_left);
         if (days_left < 0) {
             this.force_password_change = true;
         } else if (days_left < this.password_reminder_period) {
@@ -54,12 +57,15 @@ Access.Session.defbind("forcePasswordChange", "beforeGetPage", function (spec) {
 
 
 module.exports = UI.Page.clone({
-    id              : "ac_pswd_change",
-    entity_id       : "ac_user",
-    title           : "Change Password",
-    transactional   : true,
-    security        : { all: true, guest: false },
-    record_parameters: false
+    id: "ac_pswd_change",
+    entity_id: "ac_user",
+    title: "Change Password",
+    transactional: true,
+    security: {
+        all: true,
+        guest: false,
+    },
+    record_parameters: false,
 });
 
 
