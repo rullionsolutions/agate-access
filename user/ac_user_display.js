@@ -20,7 +20,7 @@ module.exports.tabs.addAll([
 
 
 module.exports.sections.addAll([
-    { id: "display" , type: "Display"      , tab: "details" , entity: "ac_user" },
+    { id: "display" , type: "Display"      , tab: "details" , entity: "ac_user", tb_span: 6 },
     { id: "roles"   , type: "ListQuery"    , tab: "details" , entity: "ac_user_role" , link_field: "user_id", tb_span: 6, title: "Roles" },
     { id: "chg_hist", type: "ChangeHistory", tab: "details" , entity: "ac_user" },
     { id: "delegter", type: "ListQuery"    , tab: "workflow", entity: "ac_user_deleg"  , link_field: "delegater", tb_span: 6, title: "People this User is Delegating to" },
@@ -35,6 +35,7 @@ module.exports.links.addAll([
     { id: "update"   , page_to: "ac_user_update"       , page_key: "{page_key}" },
     { id: "pswd_rst" , page_to: "ac_pswd_reset"        , page_key: "{page_key}" },
     { id: "delete"   , page_to: "ac_user_delete"       , page_key: "{page_key}" },
+    { id: "cham_in"  , label: "Chameleon As", url: "dyn/?mode=chameleonIn&mimic_user_id={page_key}" },
     { id: "suspend"  , page_to: "ac_user_suspend"      , page_key: "{page_key}" },
     { id: "unsuspend", page_to: "ac_user_unsuspend"    , page_key: "{page_key}" }
 ]);
