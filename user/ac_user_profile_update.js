@@ -4,12 +4,12 @@
 var UI = require("lazuli-ui/index.js");
 
 module.exports = UI.Page.clone({
-    id              : "ac_user_profile_update",
-    entity_id       : "ac_user",
-    title           : "Update your User Profile",
-    short_title     : "Update User Profile",
-    transactional   : true,
-    security        : { all: true }
+    id: "ac_user_profile_update",
+    entity_id: "ac_user",
+    title: "Update your User Profile",
+    short_title: "Update User Profile",
+    transactional: true,
+    security: { all: true, },
 });
 
 

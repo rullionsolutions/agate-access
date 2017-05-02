@@ -5,10 +5,10 @@ var Data = require("lazuli-data/index.js");
 
 
 module.exports = UI.SearchPage.clone({
-    id              : "ac_user_search",
-    entity_id       : "ac_user",
-    title           : "Search for Users",
-    short_title     : "Users"
+    id: "ac_user_search",
+    entity_id: "ac_user",
+    title: "Search for Users",
+    short_title: "Users",
 });
 
 

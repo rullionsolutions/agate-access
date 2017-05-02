@@ -4,10 +4,10 @@
 var UI = require("lazuli-ui/index.js");
 
 module.exports = UI.Page.clone({
-    id              : "ac_visit_display",
-    entity_id       : "ac_visit",
-    title           : "Visit",
-    requires_key    : true
+    id: "ac_visit_display",
+    entity_id: "ac_visit",
+    title: "Visit",
+    requires_key: true,
 });
 
 

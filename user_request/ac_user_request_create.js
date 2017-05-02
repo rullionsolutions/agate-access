@@ -6,14 +6,14 @@ var Data = require("lazuli-data/index.js");
 
 
 module.exports = UI.Page.clone({
-    id              : "ac_user_request_create",
-    entity_id       : "ac_user",
-    page_key_entity : Data.entities.get("sy_user_type"),
-    title           : "Request a User Account",
-    transactional   : true,
-    security        : { all: false, guest: true },
-    exit_url_cancel : "guest.html#page_id=ac_user_request_choose",
-    skin            : "guest.html"
+    id: "ac_user_request_create",
+    entity_id: "ac_user",
+    page_key_entity: Data.entities.get("sy_user_type"),
+    title: "Request a User Account",
+    transactional: true,
+    security: { all: false, guest: true },
+    exit_url_cancel: "guest.html#page_id=ac_user_request_choose",
+    skin: "guest.html",
 });
 
 

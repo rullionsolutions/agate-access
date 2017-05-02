@@ -5,9 +5,9 @@ var Access = require("lazuli-access/index.js");
 
 
 module.exports = UI.Page.clone({
-    id              : "ac_session_close",
-    entity_id       : "ac_session",
-    title           : "Close this Session"
+    id: "ac_session_close",
+    entity_id: "ac_session",
+    title: "Close this Session",
 });
 
 

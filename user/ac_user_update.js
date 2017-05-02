@@ -4,12 +4,12 @@
 var UI = require("lazuli-ui/index.js");
 
 module.exports = UI.Page.clone({
-    id              : "ac_user_update",
-    entity_id       : "ac_user",
-    title           : "Update this User",
-    transactional   : true,
-    requires_key    : true,
-    short_title     : "Update"
+    id: "ac_user_update",
+    entity_id: "ac_user",
+    title: "Update this User",
+    transactional: true,
+    requires_key: true,
+    short_title: "Update",
 });
 
 
