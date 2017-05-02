@@ -26,6 +26,7 @@ module.exports = Data.Entity.clone({
     allow_duplicate_email_addresses: true,
 });
 
+module.exports.register("unlockAccount");
 
 module.exports.addFields([
     { id: "id"               , label: "Id"         , type: "Text", data_length: 12, mandatory: true, search_criterion: true, list_column: true },
@@ -305,6 +306,7 @@ module.exports.define("unlock", function (unlock_code, new_password) {
     this.getField("status"     ).set("A");           // activate account
     this.getField("unlock_code").set("");
     this.getField("email_verification").set("V");
+    this.happen("unlockAccount");
     this.setNewPassword(new_password);
 });
 
