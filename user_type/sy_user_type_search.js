@@ -4,10 +4,10 @@ var UI = require("lazuli-ui/index.js");
 
 
 module.exports = UI.SearchPage.clone({
-    id              : "sy_user_type_search",
-    entity_id       : "sy_user_type",
-    title           : "Search for User Types",
-    short_title     : "User Types"
+    id: "sy_user_type_search",
+    entity_id: "sy_user_type",
+    title: "Search for User Types",
+    short_title: "User Types",
 });
 
 

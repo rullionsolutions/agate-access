@@ -6,15 +6,15 @@ var SQL = require("lazuli-sql/index.js");
 
 
 module.exports = Data.Entity.clone({
-    id              : "sy_user_type",
-    title           : "User Type",
-    area            : "sy",
-    display_page    : true,
-    transactional   : true,
-    title_field     : "title",
-    default_order   : "title",
-    primary_key     : "area,id",
-    data_volume_oom : 1,
+    id: "sy_user_type",
+    title: "User Type",
+    area: "sy",
+    display_page: true,
+    transactional: true,
+    title_field: "title",
+    default_order: "title",
+    primary_key: "area,id",
+    data_volume_oom: 1,
 });
 
 

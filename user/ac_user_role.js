@@ -4,16 +4,16 @@
 var Data = require("lazuli-data/index.js");
 
 module.exports = Data.Entity.clone({
-    id              : "ac_user_role",
-    title           : "User Role",
-    area            : "ac",
-    primary_key     : "user_id,role_id",
-    default_order   : "user_id,role_id",
-    title_field     : "role_id",
-    transactional   : true,
-    parent_entity   : "ac_user",
-    link_field      : "user_id",
-    data_volume_oom : 3,
+    id: "ac_user_role",
+    title: "User Role",
+    area: "ac",
+    primary_key: "user_id,role_id",
+    default_order: "user_id,role_id",
+    title_field: "role_id",
+    transactional: true,
+    parent_entity: "ac_user",
+    link_field: "user_id",
+    data_volume_oom: 3,
 });
 
 

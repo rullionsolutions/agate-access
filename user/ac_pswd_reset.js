@@ -7,7 +7,7 @@ var Data = require("lazuli-data/index.js");
 
 module.exports = UI.Page.clone({
     id: "ac_pswd_reset",
-    entity_id       : "ac_user",
+    entity_id: "ac_user",
     title: "Reset Password",
     transactional: true,
     requires_key: true,

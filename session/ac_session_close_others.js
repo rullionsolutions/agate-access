@@ -4,10 +4,10 @@ var UI = require("lazuli-ui/index.js");
 
 
 module.exports = UI.Page.clone({
-    id            : "ac_session_close_others",
-    entity_id       : "ac_session",
-    title        : "Close all other Sessions",
-    short_title    : "Close Others"
+    id: "ac_session_close_others",
+    entity_id: "ac_session",
+    title: "Close all other Sessions",
+    short_title: "Close Others",
 });
 
 

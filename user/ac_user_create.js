@@ -4,11 +4,11 @@
 var UI = require("lazuli-ui/index.js");
 
 module.exports = UI.Page.clone({
-    id              : "ac_user_create",
-    entity_id       : "ac_user",
-    title           : "Create a User",
-    short_title     : "Create",
-    transactional   : true
+    id: "ac_user_create",
+    entity_id: "ac_user",
+    title: "Create a User",
+    short_title: "Create",
+    transactional: true,
 });
 
 

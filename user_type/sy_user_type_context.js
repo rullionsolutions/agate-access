@@ -4,10 +4,10 @@ var UI = require("lazuli-ui/index.js");
 
 
 module.exports = UI.ContextPage.clone({
-    id              : "sy_user_type_context",
-    entity_id       : "sy_user_type",
-    title           : "User Type",
-    requires_key    : true
+    id: "sy_user_type_context",
+    entity_id: "sy_user_type",
+    title: "User Type",
+    requires_key: true,
 });
 
 

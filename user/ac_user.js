@@ -11,17 +11,17 @@ var IO = require("lazuli-io/index.js");
 
 
 module.exports = Data.Entity.clone({
-    id              : "ac_user",
-    title           : "User",
-    area            : "ac",
-    primary_key     : "id",                // Specified like this to avoid issues with multi-part keys from changing sequence
-    default_order   : "name",
-    title_field     : "name",
-    transactional   : true,
-    display_page    : true,
-    autocompleter   : true,
-    security        : { rl_user_admin: true },
-    data_volume_oom : 3,
+    id: "ac_user",
+    title: "User",
+    area: "ac",
+    primary_key: "id",                // Specified like this to avoid issues with multi-part keys from changing sequence
+    default_order: "name",
+    title_field: "name",
+    transactional: true,
+    display_page: true,
+    autocompleter: true,
+    security: { rl_user_admin: true },
+    data_volume_oom: 3,
     user_request_types_allowed: "_key IN ( 'rm.perm', 'vr.hiring_mgr' )",
     allow_duplicate_email_addresses: true,
 });
@@ -188,12 +188,12 @@ module.exports.define("sendEmailAddressChangeNotification", function () {
             this.getField("email").isValid() &&
            !this.email_address_change_ntfcn_sent) {
         Data.entities.get("ac_email").create({
-            to_user         : this.getKey(),
-            to_addr         : this.getField("email").orig_val,
-            new_email_addr  : this.getField("email").get(),
-            user_name       : this.getField("name" ).get(),
-            nice_name       : Core.Format.convertNameFirstSpaceLast(this.getField("name").get()),
-            text_string     : "ac.email_address_changed"
+            to_user: this.getKey(),
+            to_addr: this.getField("email").orig_val,
+            new_email_addr: this.getField("email").get(),
+            user_name: this.getField("name" ).get(),
+            nice_name: Core.Format.convertNameFirstSpaceLast(this.getField("name").get()),
+            text_string: "ac.email_address_changed",
         }).send();
 
         this.email_address_change_ntfcn_sent = true;

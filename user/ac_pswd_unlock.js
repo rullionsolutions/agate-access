@@ -5,15 +5,15 @@ var Data = require("lazuli-data/index.js");
 
 
 module.exports = UI.Page.clone({
-    id              : "ac_pswd_unlock",
-    entity_id       : "ac_user",
-    title           : "Reset Password",
-    transactional   : false,                // avoid setting page.primary_row
-    security        : { all: false, guest: true },
-    skin            : "guest.html",
-//    exit_url_save   : "index.html",
-    exit_url_cancel : "index.html",
-    record_parameters: false
+    id: "ac_pswd_unlock",
+    entity_id: "ac_user",
+    title: "Reset Password",
+    transactional: false,                // avoid setting page.primary_row
+    security: { all: false, guest: true },
+    skin: "guest.html",
+//    exit_url_save: "index.html",
+    exit_url_cancel: "index.html",
+    record_parameters: false,
 });
 
 

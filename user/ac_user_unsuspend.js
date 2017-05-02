@@ -5,11 +5,11 @@ var Data = require("lazuli-data/index.js");
 
 
 module.exports = UI.Page.clone({
-    id           : "ac_user_unsuspend",
-    entity_id       : "ac_user",
-    title        : "Unsuspend",
+    id: "ac_user_unsuspend",
+    entity_id: "ac_user",
+    title: "Unsuspend",
     transactional: true,
-    requires_key : true
+    requires_key: true,
 });
 
 

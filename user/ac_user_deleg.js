@@ -4,16 +4,16 @@ var Core = require("lapis-core/index.js");
 var Data = require("lazuli-data/index.js");
 
 module.exports = Data.Entity.clone({
-    id              : "ac_user_deleg",
-    title           : "User Delegate",
-    area            : "ac",
-    primary_key     : "delegater,delegatee",
-    default_order   : "delegater,delegatee",
-    title_field     : "delegater",
-    transactional   : true,
-    parent_entity   : "ac_user",
-    link_field      : "delegater",
-    data_volume_oom : 3,
+    id: "ac_user_deleg",
+    title: "User Delegate",
+    area: "ac",
+    primary_key: "delegater,delegatee",
+    default_order: "delegater,delegatee",
+    title_field: "delegater",
+    transactional: true,
+    parent_entity: "ac_user",
+    link_field: "delegater",
+    data_volume_oom: 3,
 });
 
 
