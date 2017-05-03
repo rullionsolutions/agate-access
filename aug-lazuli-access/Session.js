@@ -98,8 +98,9 @@ Access.Session.defbind("reportLastLogin", "start", function () {
         resultset = SQL.Connection.shared.executeQuery("SELECT MAX(start_dttm) FROM ac_session WHERE user_id="
             + SQL.Connection.escape(this.user_id) + " AND id <> " + this.id);
         resultset.next();
-        last_login_dttm = Date.parse(SQL.Connection.getColumnString(resultset, 1));
+        last_login_dttm = Date.parseDateTime(SQL.Connection.getColumnString(resultset, 1));
         if (last_login_dttm) {
+            this.debug("reportLastLogin() date: " + last_login_dttm);
             this.getMessageManager().add({
                 type: "I",
                 text: "Welcome back! You last logged in"
