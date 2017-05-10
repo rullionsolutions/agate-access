@@ -17,6 +17,8 @@ INSERT INTO ac_user (_key, id, name, status, user_type, email, email_verificatio
 INSERT INTO ac_user (_key, id, name, status, user_type, email, email_verification, password) VALUES ('haigha'   , 'haigha'   , 'Haigh, Alistair'  , 'A', 'ac.core', 'alistair.haigh@rullion.co.uk'  , 'V', 'b8e9f7f3f3edb836c495af5dfbe02eca');
 INSERT INTO ac_user (_key, id, name, status, user_type, email, email_verification, password) VALUES ('redfearnj', 'redfearnj', 'Redfearn, Jamie'  , 'A', 'ac.core', 'jamie.redfearn@rullion.co.uk'  , 'V', '99e4882b62a0de04122e09de30fbcecb');
 INSERT INTO ac_user (_key, id, name, status, user_type, email, email_verification, password) VALUES ('behambar' , 'behambar' , 'Behambari, Julio' , 'A', 'ac.core', 'julio.behambari@rullion.co.uk' , 'V', '4a38ca0a3572eb27961fbfd29f597b76');
+INSERT INTO ac_user (_key, id, name, status, user_type, email, email_verification, password) VALUES ('finchk'   , 'finchk'   , 'Finch, Kevin'     , 'A', 'ac.core', 'kevin.finch@rullion.co.uk'     , 'V', '1ee161b034d402a39fc4fdb4003f51ad');
+
 -- new style password
 INSERT INTO ac_user (_key, id, name, status, user_type, email, email_verification, iterations, pswd_pbkdf, salt) VALUES ('kurolaj'  , 'kurolaj'  , 'Kurola, Joel'      , 'A', 'ac.core', 'joel.kurola@rullion.co.uk'      , 'V', 10000, '13a0f33b11cd433a7a3313c8baac0a81512167bdf198b387fe5605d7c7297cf051c038cfb1ead31cc1989e3a015ac2450a0dd06781da03f7e50147359bff6fc9', '582161d4abac7f644e40e6b4c0198410c5590602f35d15bba24e3a0da0b65328566bbeeaad65250a0e692b300d44cf56fd4055c43aff2e313712031c480054e9');
 INSERT INTO ac_user (_key, id, name, status, user_type, email, email_verification, iterations, pswd_pbkdf, salt) VALUES ('platte'   , 'platte'   , 'Platt, Elizabeth'  , 'A', 'ac.core', 'elizabeth.platt@rullion.co.uk'  , 'V', 10000, 'a037ced87b5c68e1c8fef73504a8a5f69fc4338c06c0418a41fb4c17441385c77c7414341139427313aa4d969c12895570da8c9b85b4bdcfb41964e830824e4e', '92a89dcdae0e0fb1ff6cfeb2fad4616398f0389b73a8ad24a1b20e40f314b79e97ec40ffb6ee700be24ea0a88e42c315d499dcdfb0c55a9abf0fbfe813cdab91');
@@ -42,6 +44,9 @@ INSERT INTO ac_user_role (user_id, role_id, _key) VALUES ( 'beastat'  , 'user'  
 INSERT INTO ac_user_role (user_id, role_id, _key) VALUES ( 'beastat'  , 'sysmgr', 'beastat.sysmgr' );
 INSERT INTO ac_user_role (user_id, role_id, _key) VALUES ( 'behambar' , 'user'  , 'behambar.user' );
 INSERT INTO ac_user_role (user_id, role_id, _key) VALUES ( 'behambar' , 'sysmgr', 'behambar.sysmgr' );
+INSERT INTO ac_user_role (user_id, role_id, _key) VALUES ( 'finchk'   , 'sysmgr', 'finchk.sysmgr');
+INSERT INTO ac_user_role (user_id, role_id, _key) VALUES ( 'finchk'   , 'user'  , 'finchk.user');
+
 INSERT INTO ac_user_role (user_id, role_id, _key) VALUES ( 'francis'  , 'user'  , 'francis.user' );
 INSERT INTO ac_user_role (user_id, role_id, _key) VALUES ( 'francis'  , 'sysmgr', 'francis.sysmgr' );
 INSERT INTO ac_user_role (user_id, role_id, _key) VALUES ( 'haigha'   , 'user'  , 'haigha.user' );
@@ -52,16 +57,16 @@ INSERT INTO ac_user_role (user_id, role_id, _key) VALUES ( 'platte'   , 'user'  
 INSERT INTO ac_user_role (user_id, role_id, _key) VALUES ( 'platte'   , 'sysmgr', 'platte.sysmgr' );
 INSERT INTO ac_user_role (user_id, role_id, _key) VALUES ( 'redfearnj', 'user'  , 'redfearnj.user' );
 INSERT INTO ac_user_role (user_id, role_id, _key) VALUES ( 'redfearnj', 'sysmgr', 'redfearnj.sysmgr' );
-INSERT INTO ac_user_role (user_id, role_id, _key, _tx) VALUES ('heapstua', 'sysmgr', 'heapstua.sysmgr', NULL);
-INSERT INTO ac_user_role (user_id, role_id, _key, _tx) VALUES ('heapstua', 'user', 'heapstua.user', NULL);
-INSERT INTO ac_user_role (user_id, role_id, _key, _tx) VALUES ('sinfiej', 'sysmgr', 'sinfiej.sysmgr', NULL);
-INSERT INTO ac_user_role (user_id, role_id, _key, _tx) VALUES ('sinfiej', 'user', 'sinfiej.user', NULL);
-INSERT INTO ac_user_role (user_id, role_id, _key, _tx) VALUES ('willias', 'sysmgr', 'willias.sysmgr', NULL);
-INSERT INTO ac_user_role (user_id, role_id, _key, _tx) VALUES ('willias', 'user', 'willias.user', NULL);
-INSERT INTO ac_user_role (user_id, role_id, _key, _tx) VALUES ('crosbis', 'sysmgr', 'crosbis.sysmgr', NULL);
-INSERT INTO ac_user_role (user_id, role_id, _key, _tx) VALUES ('crosbis', 'user', 'crosbis.user', NULL);
-INSERT INTO ac_user_role (user_id, role_id, _key, _tx) VALUES ('younism', 'sysmgr', 'younism.sysmgr', NULL);
-INSERT INTO ac_user_role (user_id, role_id, _key, _tx) VALUES ('younism', 'user', 'younism.user', NULL);
-INSERT INTO ac_user_role (user_id, role_id, _key, _tx) VALUES ('richarr', 'sysmgr', 'richarr.sysmgr', NULL);
-INSERT INTO ac_user_role (user_id, role_id, _key, _tx) VALUES ('richarr', 'user', 'richarr.user', NULL);
+INSERT INTO ac_user_role (user_id, role_id, _key) VALUES ('heapstua', 'sysmgr', 'heapstua.sysmgr');
+INSERT INTO ac_user_role (user_id, role_id, _key) VALUES ('heapstua', 'user', 'heapstua.user');
+INSERT INTO ac_user_role (user_id, role_id, _key) VALUES ('sinfiej', 'sysmgr', 'sinfiej.sysmgr');
+INSERT INTO ac_user_role (user_id, role_id, _key) VALUES ('sinfiej', 'user', 'sinfiej.user');
+INSERT INTO ac_user_role (user_id, role_id, _key) VALUES ('willias', 'sysmgr', 'willias.sysmgr');
+INSERT INTO ac_user_role (user_id, role_id, _key) VALUES ('willias', 'user', 'willias.user');
+INSERT INTO ac_user_role (user_id, role_id, _key) VALUES ('crosbis', 'sysmgr', 'crosbis.sysmgr');
+INSERT INTO ac_user_role (user_id, role_id, _key) VALUES ('crosbis', 'user', 'crosbis.user');
+INSERT INTO ac_user_role (user_id, role_id, _key) VALUES ('younism', 'sysmgr', 'younism.sysmgr');
+INSERT INTO ac_user_role (user_id, role_id, _key) VALUES ('younism', 'user', 'younism.user');
+INSERT INTO ac_user_role (user_id, role_id, _key) VALUES ('richarr', 'sysmgr', 'richarr.sysmgr');
+INSERT INTO ac_user_role (user_id, role_id, _key) VALUES ('richarr', 'user', 'richarr.user');
 
