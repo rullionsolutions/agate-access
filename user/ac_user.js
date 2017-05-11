@@ -206,6 +206,7 @@ module.exports.define("generateId", function (trans, name, email) {
         resultset,
         suffix,
         highest = -1;
+    var that = this;
 
     if (this.use_email_address_as_user_id) {
         return email;
@@ -233,7 +234,7 @@ module.exports.define("generateId", function (trans, name, email) {
         if (row.parent.id === "ac_user" && row.getKey().indexOf(seed) === 0) {
             suffix = row.getKey().replace(new RegExp("^" + seed), "0");
             highest = Math.max(highest, parseInt(suffix, 10));
-            this.trace(this, "generateId() matching prefix found from trans, suffix: " + suffix + ", highest now: " + highest);
+            that.trace(this, "generateId() matching prefix found from trans, suffix: " + suffix + ", highest now: " + highest);
         }
     });
     this.debug("generateId: seed: " + seed + ", suffix: " + suffix + ", highest: " + highest);
