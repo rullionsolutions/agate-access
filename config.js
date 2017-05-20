@@ -108,8 +108,12 @@ Data.forms.add(Data.Form.clone({
 
 Rhino.App.defbind("ac_countActiveUsers", "dailyBatch", function (session) {
     var active_users = module.exports.countActiveUsers();
-    session.messages.add({ id: "active_users_last_month", type: 'I',
-        text: "Active Users within the Last Month: " + active_users, active_users: active_users });
+    session.messages.add({
+        id: "active_users_last_month",
+        type: 'I',
+        text: "Active Users within the Last Month: " + active_users,
+        active_users: active_users,
+    });
 });
 
 
@@ -122,8 +126,8 @@ Rhino.App.defbind("access_loadData", "build", function () {
 
 
 module.exports.define("countActiveUsers", function () {
-    var resultset,
-        out;
+    var resultset;
+    var out;
 
     try {
         resultset = SQL.Connection.shared.executeQuery(
