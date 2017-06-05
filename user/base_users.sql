@@ -29,7 +29,7 @@ INSERT INTO ac_user (_key, id, name, status, user_type, email, email_verificatio
 INSERT INTO ac_user (_key, id, name, status, user_type, email, email_verification, iterations, pswd_pbkdf, salt) VALUES ('younism' , 'younism'   , 'Younis, Mo'        , 'A', 'ac.core', 'mo.younis@rullion.co.uk'        , 'V', 10000, 'f7dd7ed56e013789369b7a0016a22040899ab00866da20d5d1ce859d2c97c98e4a3568ce5e17d622c269465b95df11c5ad31c166b9cb0fbb4a88c98a19194779', '179de913ff55f4815944b97bd871821378f0906ee2cfcfbf5ada5d0e78b50ef59c6c78368fb3779316ebf2dff87dffb3288cd93b090bf8d4d94758a23c2d5c4f');
 INSERT INTO ac_user (_key, id, name, status, user_type, email, email_verification, iterations, pswd_pbkdf, salt) VALUES ('crosbis' , 'crosbis'   , 'Crosbie, Stephanie', 'A', 'ac.core', 'stephanie.crosbie@rullion.co.uk', 'V', 10000, '85ac3deeb4f23533d5cc882e902324a63e38dfd0651050bffe21ae02dc7f33f5776b89f7c58a779dfc9b108a73a70729aa34eb463fb4d60dc15915d3b8846a11', 'b2af01e86c69dcc32ffb2c67576ab3fc41a9a72ba09e12052d0a6d453e41404f82bb5667e8c9647e5432396a46e0065853abd00bde233a557b8ec0883913a2d6');
 INSERT INTO ac_user (_key, id, name, status, user_type, email, email_verification, iterations, pswd_pbkdf, salt) VALUES ('richarr' , 'richarr'   , 'Richardson, Rosie' , 'A', 'ac.core', 'rosie.richardson@rullion.co.uk' , 'V', 10000, 'd2d9d9b9d49fe7b12968c71a5ad6d7245f10d52d352708bf20c0d2242be0c07e5ddf400435b856d29a3595de410eb2301962edee0855657a6ffbcfe4534955ec', '6218f56515c48ad6d695b9337f568c4fef3ab190e49fb5d4e48448e354ff6a6eec106ae3a22df9f27cb8fc5101f2ae6789bb154a33230ce53ba3e5d523b7c05d');
-
+INSERT INTO ac_user (_key, id, name, status, user_type, email, email_verification, iterations, pswd_pbkdf, salt) VALUES ('mihaylv' , 'mihaylv'   , 'Mihaylov, Velizar' , 'A', 'ac.core', 'velizar.mihaylov@rullion.co.uk' , 'V', 10000, '15abcb0f15cf635b3b6f344ca5e7b7c07639e52e481703739e480e573d26f4a145067fcb3c1f63046086c2ce8286bab4570dd08068bba8c9d8fcf57cd7594bd6', '7a42e0743bb69750cad6126570f70ec4305241c0eae3a612a8a1a704fa43824124275ef41475cf18620336663675e2b6b64fb21c46e3a6dd1f7c1cd3294d79fd');
 
 
 
@@ -69,4 +69,5 @@ INSERT INTO ac_user_role (user_id, role_id, _key) VALUES ('younism', 'sysmgr', '
 INSERT INTO ac_user_role (user_id, role_id, _key) VALUES ('younism', 'user', 'younism.user');
 INSERT INTO ac_user_role (user_id, role_id, _key) VALUES ('richarr', 'sysmgr', 'richarr.sysmgr');
 INSERT INTO ac_user_role (user_id, role_id, _key) VALUES ('richarr', 'user', 'richarr.user');
-
+INSERT INTO ac_user_role (user_id, role_id, _key) VALUES ('mihaylv', 'sysmgr', 'mihaylv.sysmgr');
+INSERT INTO ac_user_role (user_id, role_id, _key) VALUES ('mihaylv', 'user', 'mihaylv.user');
