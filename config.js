@@ -14,7 +14,6 @@ module.exports = Data.Area.clone({
     title: "Access",
     dependencies: [ "sy" ],
     security: { sysmgr: true },
-    text_strings: {},
     params: {},
     glyphicon: "icon-eye-open",
 });
