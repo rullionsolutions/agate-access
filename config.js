@@ -43,7 +43,6 @@ menu3.addChild({ page: "ac_file_search" });
 
 menu3.addChild({ page: "ac_export_search" });
 menu3.addChild({ page: "ac_import_search" });
-menu3.addChild({ page: "ac_runtime_search" });
 
 
 Access.roles.add(Access.Role.clone({
