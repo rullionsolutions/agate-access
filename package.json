@@ -1,6 +1,6 @@
 {
   "name": "agate-access",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Persistent Entities for Users, Roles and Sessions, etc",
   "main": "index.js",
   "scripts": {
