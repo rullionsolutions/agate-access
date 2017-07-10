@@ -189,6 +189,7 @@ module.exports.define("sendEmailAddressChangeNotification", function () {
             this.getField("email").isValid() &&
            !this.email_address_change_ntfcn_sent) {
         Data.entities.get("ac_email").create({
+            session: this.trans.session,
             to_user: this.getKey(),
             to_addr: this.getField("email").orig_val,
             new_email_addr: this.getField("email").get(),
